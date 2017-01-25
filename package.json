@@ -1,8 +1,8 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "version": "0.10.0",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
+  "name": "dudget",
+  "productName": "Dudget",
+  "version": "0.1.0",
+  "description": "Montly budget desktop app",
   "main": "main.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 mocha --retries 2 --compilers js:babel-register --recursive --require ./test/setup.js test/**/*.spec.js",
@@ -27,9 +27,9 @@
   },
   "browserslist": "chrome 50",
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.develar.ElectronReact",
-    "category": "public.app-category.tools",
+    "productName": "Dudget",
+    "appId": "com.dugger.dudget",
+    "category": "Finance",
     "dmg": {
       "contents": [
         {
@@ -72,27 +72,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chentsulin/electron-react-boilerplate.git"
+    "url": "git+https://github.com/addugger/dudget"
   },
   "author": {
-    "name": "C. T. Lin",
-    "email": "chentsulin@gmail.com",
-    "url": "https://github.com/chentsulin"
+    "name": "Aaron Dugger",
+    "email": "addugger@gmail.com",
+    "url": "https://github.com/addugger"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chentsulin/electron-react-boilerplate/issues"
+    "url": "https://github.com/addugger/dudget/issues"
   },
   "keywords": [
     "electron",
-    "boilerplate",
     "react",
     "react-router",
-    "flux",
     "webpack",
-    "react-hot"
+    "react-hot",
+    "budget"
   ],
-  "homepage": "https://github.com/chentsulin/electron-react-boilerplate#readme",
+  "homepage": "https://github.com/addugger/dudget#readme",
   "devDependencies": {
     "asar": "^0.13.0",
     "babel-core": "^6.21.0",
