@@ -1,3 +1,5 @@
+Travis CI: [![Build Status](https://travis-ci.org/addugger/dudget.svg?branch=master)](https://travis-ci.org/addugger/dudget)
+
 # Initial Notes
 * The plan is to build a monthly budget desktop app using Electron.  As a  starting point, I'm using C. T. Lin's electron-react-boilerplate.
 * First I'll make sure to set the project up with Travis and Appveyor as this is also a personal excercise in CI practices.
