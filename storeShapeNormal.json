@@ -1,0 +1,21 @@
+{
+    "months": [
+        {
+            "month": "string",
+            "year": "int",
+            "groups": {
+                "name": "string",
+                "categories": {
+                    "name": "string",
+                    "budgeted": "number",
+                    "spent": "number",
+                    "rollover": "boolean"
+                }
+            },
+            "income-actual": "number"
+        }
+    ],
+    "budget-settings": {
+        "income-projected": "number"
+    }
+}

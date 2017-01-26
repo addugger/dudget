@@ -1,0 +1,27 @@
+{
+    "months": [
+        {
+            "month": "string",
+             "year": "int",
+             "group": "<id>",
+             "category": "<id>",
+             "income-acutal": "decimal"
+        }
+    ],
+    "groups": {
+        "<id>": {
+            "id": "<id>",
+            "name": "string"
+        }
+    },
+    "categories": {
+        "<id>": {
+            "id": "<id>",
+            "name": "string",
+            "budgeted": "decimal",
+            "spent": "decimal",
+            "rollover": "boolean"
+        }
+    },
+    "income-projected": "decimal"
+}

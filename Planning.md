@@ -1,8 +1,0 @@
-# Initial Notes
-* The plan is to build a monthly budget desktop app using Electron.  As a JavaScript starting point, I'm using Corey House's react-slingshot.
-* I haven't really worked with React before, so, while I largely understand what's going on in the sample project, I'm gonna go do some React tutorial projects to better understand some things/pound React into my brain a bit more.
-* I wanted to go ahead and get this repo set up even though it's mostly a copy of the react-slingshot example project right now just so I have it ready to go.
-* My first planned step when I get back to this is to modify the build scripts so that this builds/runs with Electron to see if I can get the hot-reloading and whatnot to work with Electron.
-* Then I'll make sure to set the project up with Travis and Appveyor as this is also a personal excercise in CI practices.
-* Once I'm at this point, I'm going to create a branch to save off the sample project so I have something to go back to, and then begin work on my monthly budget app (Dudget is a combination of budget and my last name, Dugger).
-* I'll provide more details of planned features of the budget app when I get to it, but be forewarned that my plan is really for this project to be a learning process that I can then use as a springboard to work on something more complex (a Magic the Gathering desktop app).  So the plan is to keep this project relatively simple (though I am writing it to replace the horrible Google Sheets spreadsheet my wife currently uses for our monthly budget).
