@@ -1,4 +1,5 @@
-Travis CI: [![Build Status](https://travis-ci.org/addugger/dudget.svg?branch=master)](https://travis-ci.org/addugger/dudget)
+Travis CI (master): [![Build Status](https://travis-ci.org/addugger/dudget.svg?branch=master)](https://travis-ci.org/addugger/dudget)
+Appveyor (master): [![Build status](https://ci.appveyor.com/api/projects/status/5f36lbq0r0yw7q4e/branch/master?svg=true)](https://ci.appveyor.com/project/addugger/dudget/branch/master)
 
 # Initial Notes
 * The plan is to build a monthly budget desktop app using Electron.  As a  starting point, I'm using C. T. Lin's electron-react-boilerplate.
