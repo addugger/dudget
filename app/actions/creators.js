@@ -1,41 +1,28 @@
+/* eslint-disable max-len */
 import * as types from './types';
 
 // budget-wide
-export function addMonth() {
-  return { type: types.ADD_MONTH };
-}
+export const addMonth = () => ({ type: types.ADD_MONTH });
 
-export function setViewedMonth(index) {
-  return { type: types.SET_VIEWED_MONTH, index };
-}
+export const save = () => ({ type: types.SAVE });
 
-export function setProjectedIncome(income) {
-  return { type: types.SET_PROJECTED_INCOME, income };
-}
+export const setViewedMonth = (monthId) => ({ type: types.SET_VIEWED_MONTH, monthId });
 
 // month specific
-export function addCategory(groupName, catName, budget, rollover) {
-  return {
-    type: types.ADD_CATEGORY,
-    groupName,
-    catName,
-    budget,
-    rollover
-  };
-}
+export const addCategory = (groupName, catName, budget, rollover) => ({
+  type: types.ADD_CATEGORY,
+  groupName,
+  catName,
+  budget,
+  rollover
+});
 
-export function updateActualIncome(income) {
-  return { type: types.UPDATE_ACTUAL_INCOME, income };
-}
+export const updateActualIncome = (income) => ({ type: types.UPDATE_ACTUAL_INCOME, income });
 
-export function updateCategorySpent(spent) {
-  return { type: types.UPDATE_CATEGORY_SPENT, spent };
-}
+export const setCategoryRollover = (categoryId, rollover) => ({ type: types.SET_CATEGORY_ROLLOVER, rollover });
 
-export function updateCategoryBudget(budget) {
-  return { type: types.UPDATE_CATEGORY_BUDGET, budget };
-}
+export const setProjectedIncome = (income) => ({ type: types.SET_PROJECTED_INCOME, income });
 
-export function setCategoryRollover(rollover) {
-  return { type: types.SET_CATEGORY_ROLLOVER, rollover };
-}
+export const updateCategorySpent = (categoryId, spent) => ({ type: types.UPDATE_CATEGORY_SPENT, categoryId, spent });
+
+export const updateCategoryBudget = (categoryId, budget) => ({ type: types.UPDATE_CATEGORY_BUDGET, categoryId, budget });

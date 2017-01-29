@@ -1,29 +1,11 @@
-import * as types from '../actions/types';
+import { ADD_MONTH, SET_VIEWED_MONTH, SAVE } from '../actions/types';
+import { getMonthInitialState } from './months';
 
-function getInitialState() {
-  return {
-    viewedMonth: 1,
-    nextMonthId: 1,
-    months: {
-      1: getMonthInitialState()
-    }
-  };
-}
+const initialState = { viewedMonth: 1, nextMonthId: 1 };
 
-function getMonthInitialState(categories = [], projectedIncome = 0) {
-  const date = new Date();
-  return {
-    month: date.toLocaleString('en-us', { month: 'long' }),
-    year: date.getFullYear(),
-    categories,
-    actualIncome: 0,
-    projectedIncome
-  };
-}
-
-function budgetApp(state = getInitialState(), action) {
+const budget = (state = initialState, action) => {
   switch (action.type) {
-    case types.ADD_MONTH: {
+    case ADD_MONTH: {
       const nextId = state.nextMonthId + 1;
       const prevCats = Object.assign({}, state.months[state.nextMonthId].categories);
       return { ...state,
@@ -34,10 +16,20 @@ function budgetApp(state = getInitialState(), action) {
         nextMonthId: nextId
       };
     }
+    case SAVE: {
+      // TODO: persist current store. later realized this maybe doesn't go in a reducer so need
+      // to figure out where it goes
+      return state;
+    }
+    case SET_VIEWED_MONTH: {
+      return { ...state, viewedMonth: action.monthId };
+    }
     default: {
       return state;
     }
   }
-}
+};
 
-export default budgetApp;
+export default budget;
+
+// TODO: figure out the proper way to split up the reducers and do it!
