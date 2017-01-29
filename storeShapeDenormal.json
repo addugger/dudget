@@ -3,6 +3,7 @@
         {
             "month": "string",
              "year": "int",
+             "index": "int",
              "group": "<id>",
              "category": "<id>",
              "income-acutal": "decimal"
@@ -23,5 +24,6 @@
             "rollover": "boolean"
         }
     },
-    "income-projected": "decimal"
+    "income-projected": "decimal",
+    "viewed-month": "int"
 }

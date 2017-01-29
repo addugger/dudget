@@ -3,6 +3,7 @@
         {
             "month": "string",
             "year": "int",
+            "index": "int",
             "groups": {
                 "name": "string",
                 "categories": {
@@ -16,6 +17,7 @@
         }
     ],
     "budget-settings": {
-        "income-projected": "number"
+        "income-projected": "number",
+        "viewed-month": "int"
     }
 }
