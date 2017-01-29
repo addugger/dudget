@@ -1,29 +1,25 @@
 {
-    "months": [
-        {
+    "months": {
+        "<id>": {
             "month": "string",
              "year": "int",
-             "index": "int",
-             "group": "<id>",
-             "category": "<id>",
-             "income-acutal": "decimal"
+             "categories": ["<id1>", "<id2>"],
+             "actualIncome": "decimal",
+             "projectedIncome": "decimal"
         }
-    ],
+    },
     "groups": {
-        "<id>": {
-            "id": "<id>",
-            "name": "string"
-        }
+        "<id>": { "name": "string" }
     },
     "categories": {
         "<id>": {
-            "id": "<id>",
+            "group": "<group id>",
             "name": "string",
             "budgeted": "decimal",
             "spent": "decimal",
             "rollover": "boolean"
         }
     },
-    "income-projected": "decimal",
-    "viewed-month": "int"
+    "viewedMonth": "<month id>",
+    "nextMonthId": "int"
 }
