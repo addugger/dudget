@@ -146,7 +146,8 @@ const budget = (state = getIntialState(), action) => {
 /* TODO: Consider following changes to allow refactoring to separate reducers:
  # Move viewedMonth and nextMonthId inside month and always pass month id with action for month
  updates
- # Move nextCategoryId inside categories. Move nextGroupId inside groups (just to make things look similar) and move groups inside categories.
+ # Move nextCategoryId inside categories. Move nextGroupId inside groups (just to make things
+ look similar) and move groups inside categories.
 */
 
 export default budget;
