@@ -9,9 +9,10 @@ export const save = () => ({ type: types.SAVE });
 export const setViewedMonth = (monthId) => ({ type: types.SET_VIEWED_MONTH, monthId });
 
 // month specific
-export const addCategory = (groupName, catName, budget, rollover) => ({
+export const addCategory = ({ groupName = '', groupId = 0, catName, budget, rollover = false }) => ({
   type: types.ADD_CATEGORY,
   groupName,
+  groupId,
   catName,
   budget,
   rollover

@@ -21,5 +21,7 @@
         }
     },
     "viewedMonth": "<month id>",
-    "nextMonthId": "int"
+    "nextMonthId": "int",
+    "nextCategoryId": "int",
+    "nextGroupId": "int"
 }
