@@ -1,27 +1,27 @@
 {
-    "months": {
-        "<id>": {
-            "month": "string",
-             "year": "int",
-             "categories": ["<id1>", "<id2>"],
-             "actualIncome": "decimal",
-             "projectedIncome": "decimal"
-        }
-    },
-    "groups": {
-        "<id>": { "name": "string" }
-    },
-    "categories": {
-        "<id>": {
-            "group": "<group id>",
-            "name": "string",
-            "budgeted": "decimal",
-            "spent": "decimal",
-            "rollover": "boolean"
-        }
-    },
+  "months": {
     "viewedMonth": "<month id>",
     "nextMonthId": "int",
+    "<id>": {
+      "month": "string",
+       "year": "int",
+       "categories": ["<id1>", "<id2>"],
+       "actualIncome": "decimal",
+        "projectedIncome": "decimal"
+    }
+  },
+  "categories": {
     "nextCategoryId": "int",
-    "nextGroupId": "int"
+    "groups": {
+      "nextGroupId": "int",
+      "<id>": { "name": "string" }
+    },
+    "<id>": {
+      "group": "<group id>",
+      "name": "string",
+      "budgeted": "decimal",
+      "spent": "decimal",
+      "rollover": "boolean"
+    }
+  }
 }

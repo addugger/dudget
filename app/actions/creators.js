@@ -1,14 +1,18 @@
 /* eslint-disable max-len */
 import * as types from './types';
 
-// budget-wide
-export const addMonth = () => ({ type: types.ADD_MONTH });
-
 export const save = () => ({ type: types.SAVE });
+
+// months
+export const addMonth = (catIds) => ({ type: types.ADD_MONTH, catIds });
+
+export const setProjectedIncome = (income) => ({ type: types.SET_PROJECTED_INCOME, income });
 
 export const setViewedMonth = (monthId) => ({ type: types.SET_VIEWED_MONTH, monthId });
 
-// month specific
+export const updateActualIncome = (income) => ({ type: types.UPDATE_ACTUAL_INCOME, income });
+
+// categories
 export const addCategory = ({ groupName = '', groupId = 0, catName, budget, rollover = false }) => ({
   type: types.ADD_CATEGORY,
   groupName,
@@ -18,11 +22,7 @@ export const addCategory = ({ groupName = '', groupId = 0, catName, budget, roll
   rollover
 });
 
-export const updateActualIncome = (income) => ({ type: types.UPDATE_ACTUAL_INCOME, income });
-
 export const setCategoryRollover = (categoryId, rollover) => ({ type: types.SET_CATEGORY_ROLLOVER, rollover });
-
-export const setProjectedIncome = (income) => ({ type: types.SET_PROJECTED_INCOME, income });
 
 export const updateCategorySpent = (categoryId, spent) => ({ type: types.UPDATE_CATEGORY_SPENT, categoryId, spent });
 
