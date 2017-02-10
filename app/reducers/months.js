@@ -1,4 +1,7 @@
-import * as actionTypes from '../actions/types';
+import { ADD_MONTH,
+  SET_PROJECTED_INCOME,
+  SET_VIEWED_MONTH,
+  UPDATE_ACTUAL_INCOME } from '../actions/types';
 
 export const getMonthsInitialState = () => {
   const date = new Date();
@@ -17,11 +20,11 @@ export const getMonthsInitialState = () => {
 
 const months = (state = getMonthsInitialState(), action) => {
   switch (action.type) {
-    case actionTypes.ADD_MONTH: {
+    case ADD_MONTH: {
       const date = new Date(
         `${state[state.nextMonthId].month} 01 ${state[state.nextMonthId].year}`);
       date.setMonth(date.getMonth() + 1);
-      const nextId = state.nextMonthId.valueOf + 1;
+      const nextId = state.nextMonthId + 1;
       return { ...state,
         [nextId]: {
           month: date.toLocaleString('en-us', { month: 'long' }),
@@ -34,17 +37,17 @@ const months = (state = getMonthsInitialState(), action) => {
         nextMonthId: nextId
       };
     }
-    case actionTypes.SET_PROJECTED_INCOME: {
+    case SET_PROJECTED_INCOME: {
       return { ...state,
         [state.viewedMonth]: { ...state[state.viewedMonth],
           projectedIncome: action.income
         }
       };
     }
-    case actionTypes.SET_VIEWED_MONTH: {
+    case SET_VIEWED_MONTH: {
       return { ...state, viewedMonth: action.monthId };
     }
-    case actionTypes.UPDATE_ACTUAL_INCOME: {
+    case UPDATE_ACTUAL_INCOME: {
       return { ...state,
         [state.viewedMonth]: { ...state[state.viewedMonth],
           actualIncome: action.income
