@@ -1,8 +1,6 @@
 /* eslint-disable max-len */
 import * as types from './types';
 
-export const save = () => ({ type: types.SAVE });
-
 // months
 export const addMonth = (catIds) => ({ type: types.ADD_MONTH, catIds });
 
@@ -22,8 +20,8 @@ export const addCategory = ({ groupName = '', groupId = 0, catName, budget, roll
   rollover
 });
 
+export const setCategoryBudget = (categoryId, budget) => ({ type: types.SET_CATEGORY_BUDGET, categoryId, budget });
+
 export const setCategoryRollover = (categoryId, rollover) => ({ type: types.SET_CATEGORY_ROLLOVER, rollover });
 
-export const updateCategorySpent = (categoryId, spent) => ({ type: types.UPDATE_CATEGORY_SPENT, categoryId, spent });
-
-export const updateCategoryBudget = (categoryId, budget) => ({ type: types.UPDATE_CATEGORY_BUDGET, categoryId, budget });
+export const setCategorySpent = (categoryId, spent) => ({ type: types.SET_CATEGORY_SPENT, categoryId, spent });

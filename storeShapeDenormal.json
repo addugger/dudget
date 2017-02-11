@@ -17,9 +17,9 @@
       "<id>": { "name": "string" }
     },
     "<id>": {
-      "group": "<group id>",
+      "groupId": "<group id>",
       "name": "string",
-      "budgeted": "decimal",
+      "budget": "decimal",
       "spent": "decimal",
       "rollover": "boolean"
     }

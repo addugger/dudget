@@ -11,4 +11,4 @@ const rootReducer = combineReducers({
 
 export default rootReducer;
 
-// TODO: Next thing to do is right tests for the reducers
+// TODO: Next thing to do is write tests for the action creators
