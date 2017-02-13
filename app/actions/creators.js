@@ -11,7 +11,7 @@ export const setViewedMonth = (monthId) => ({ type: types.SET_VIEWED_MONTH, mont
 export const updateActualIncome = (income) => ({ type: types.UPDATE_ACTUAL_INCOME, income });
 
 // categories
-export const addCategory = ({ groupName = '', groupId = 0, catName, budget, rollover = false }) => ({
+export const addCategory = ({ groupName = '', groupId = -1, catName, budget, rollover = false }) => ({
   type: types.ADD_CATEGORY,
   groupName,
   groupId,
@@ -22,6 +22,6 @@ export const addCategory = ({ groupName = '', groupId = 0, catName, budget, roll
 
 export const setCategoryBudget = (categoryId, budget) => ({ type: types.SET_CATEGORY_BUDGET, categoryId, budget });
 
-export const setCategoryRollover = (categoryId, rollover) => ({ type: types.SET_CATEGORY_ROLLOVER, rollover });
+export const setCategoryRollover = (categoryId, rollover) => ({ type: types.SET_CATEGORY_ROLLOVER, categoryId, rollover });
 
 export const setCategorySpent = (categoryId, spent) => ({ type: types.SET_CATEGORY_SPENT, categoryId, spent });
